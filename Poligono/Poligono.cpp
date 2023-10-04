@@ -1,7 +1,6 @@
 #include "Poligono.h"
 #include "TVector2.h"
 #include <cmath>
-#include "Vettore.h"
 
 
 PoligonoRegolare::PoligonoRegolare(double l, double n){
