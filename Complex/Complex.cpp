@@ -2,11 +2,6 @@
 #include"Complex.h"
 #include<cmath>
 
-// operators Complex - Complex
-Complex Complex::operator*(double par){
-  Complex c(par*fX,par*fY);
-  return c;
-}
 Complex Complex::operator*(const Complex& c){
   return Complex( fX*c.fX - fY*c.fY, fX*c.fY + fY*c.fX );
 }

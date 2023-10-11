@@ -6,15 +6,18 @@
 
 class Complex: public TVector2{
 public:
-  Complex(double re=0, double im=0): TVector2(re,im) {};
-
+  Complex(double re, double im): TVector2(re,im) {};
+  Complex(): TVector2(0,0) {};
   Complex(const TVector2& c):TVector2(c.X(),c.Y()){};
+
   // Complex - Complex operation
-  Complex operator*(double);
   Complex operator*(const Complex&);
   Complex operator/(const Complex&);
-  
+
+  // Conjugate
   Complex Conjugate() const { return Complex(fX, -fY); };
+
+  // Access to real and imaginary part
   double  Re() const { return fX; };
   double  Im() const { return fY; };
   void    Re(double re) { fX = re; }; 
